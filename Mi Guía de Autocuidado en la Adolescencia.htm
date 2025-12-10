@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Mi Guía de Autocuidado en la Adolescencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Mi%20Gu%C3%ADa%20de%20Autocuidado%20en%20la%20Adolescencia_files/css2.css" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #0f172a;
+      --color-bg-soft: #111827;
+      --color-accent: #38bdf8;
+      --color-accent-soft: rgba(56, 189, 248, 0.15);
+      --color-card: #020617;
+      --color-text: #e5e7eb;
+      --color-muted: #9ca3af;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      color: var(--color-text);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+      border-radius: 32px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      overflow: hidden;
+    }
+
+    header.hero {
+      padding: 32px 32px 24px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 800px) {
+      header.hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-main h1 {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-main h1 span {
+      background: linear-gradient(120deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-main p {
+      color: var(--color-muted);
+      font-size: 0.98rem;
+      max-width: 480px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--color-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-meta {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 22px;
+      padding: 16px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .hero-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .meta-label {
+      color: var(--color-muted);
+      font-weight: 400;
+    }
+
+    .meta-value {
+      font-weight: 500;
+    }
+
+    .meta-line {
+      border: none;
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      margin: 6px 0;
+    }
+
+    .meta-input {
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
+      min-width: 160px;
+      padding-bottom: 2px;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    main {
+      padding: 24px 24px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    section {
+      background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.17), transparent 65%);
+      border-radius: var(--radius-xl);
+      padding: 20px 20px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    section:nth-of-type(even) {
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 65%);
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 span.badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--color-muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      padding: 12px 12px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 6px;
+    }
+
+    .card-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--color-accent-soft);
+      color: var(--color-accent);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .example {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      margin-top: 6px;
+      padding-left: 4px;
+      border-left: 2px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .example strong {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .mi-compromiso {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      padding: 6px 8px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.55);
+      color: var(--color-muted);
+    }
+
+    .mi-compromiso span {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+      font-size: 0.75rem;
+    }
+
+    .chip {
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--color-muted);
+    }
+
+    .resources-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .resources-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .resource {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 18px;
+      padding: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.88rem;
+    }
+
+    .resource-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .resource small {
+      color: var(--color-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .resource a {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-size: 0.82rem;
+    }
+
+    .resource a:hover {
+      text-decoration: underline;
+    }
+
+    .reflection-box {
+      margin-top: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .reflection-area {
+      width: 100%;
+      min-height: 160px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--color-text);
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      resize: vertical;
+    }
+
+    .reflection-hint {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+    }
+
+    footer {
+      padding: 0 24px 18px;
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      text-align: right;
+    }
+
+    .highlight {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-main">
+        <h1>
+          <span>Mi Guía de Autocuidado</span><br>
+          en la Adolescencia
+        </h1>
+        <p>
+          Esta guía sirve para aprender a cuidar mi cuerpo, mis 
+          emociones y mis relaciones durante la adolescencia.
+        </p>
+      </div>
+
+      <aside class="hero-meta">
+        <div class="hero-meta-row">
+          <span class="meta-label">Nombre:</span>
+          <span class="meta-value meta-input">Alan Barradas Rodríguez</span>
+        </div>
+        <div class="hero-meta-row">
+          <span class="meta-label">Grupo:</span>
+          <span class="meta-value meta-input">5 "A"</span>
+        </div>
+        <div class="hero-meta-row">
+          <span class="meta-label">Fecha:</span>
+          <span class="meta-value meta-input">10 / 12 / 2025</span>
+        </div>
+        <hr class="meta-line">
+        <div class="hero-meta-row">
+          <span class="meta-label">Materia:</span>
+          <span class="meta-value meta-input">Educación Integral en Sexualidad</span>
+        </div>
+      </aside>
+    </header>
+
+    <main>
+      <!-- 2. Introducción breve -->
+      <section id="introduccion">
+        <h2>
+          Introducción
+          <span class="badge">¿Qué es el autocuidado?</span>
+        </h2>
+        <p>
+          El <span class="highlight">autocuidado</span> es el conjunto de acciones que hago
+          para proteger mi salud física, emocional y social. No se trata solo de verme bien,
+          sino de cuidar mi cuerpo, mis pensamientos, mis sentimientos y la forma en la que
+          me relaciono con las demás personas.
+        </p>
+        <p>
+          En la adolescencia ocurren muchos cambios al mismo tiempo. Por eso es muy importante
+          aprender a escucharme, poner límites, pedir ayuda cuando la necesito y construir
+          hábitos que me hagan sentir bien.
+        </p>
+      </section>
+
+      <!-- 3.1 Cambios físicos -->
+      <section id="cambios-fisicos">
+        <h2>
+          Cambios físicos
+          <span class="badge">Cuerpo y hábitos saludables</span>
+        </h2>
+        <p class="section-subtitle">
+          En esta sección escribo cómo voy a cuidar mi higiene, mi alimentación, el ejercicio y mi descanso.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Higiene personal</div>
+              <div class="card-tag">Cuidado diario</div>
+            </div>
+            <ul>
+              <li>Bañarme diariamente y cambiarme de ropa limpia.</li>
+              <li>Lavarme las manos con agua y jabón antes de comer y después de ir al baño.</li>
+              <li>Cuidar mi higiene bucal: cepillar mis dientes al menos 2 veces al día.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Lavarme la cara cada mañana y noche para cuidar mi piel”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Alimentación y ejercicio</div>
+              <div class="card-tag">Energía y movimiento</div>
+            </div>
+            <ul>
+              <li>Incluir frutas y verduras en la mayoría de mis comidas.</li>
+              <li>Evitar el exceso de refrescos, frituras y comida ultraprocesada.</li>
+              <li>Realizar actividad física al menos 30 minutos la mayoría de los días.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Caminar o hacer alguna actividad física ligera al menos 3 veces por semana”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Sueño y descanso</div>
+              <div class="card-tag">Recargar energía</div>
+            </div>
+            <ul>
+              <li>Intentar dormir entre 8 y 9 horas cada noche.</li>
+              <li>Evitar el uso del celular justo antes de dormir.</li>
+              <li>Crear una rutina tranquila antes de ir a la cama.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Dormir al menos 8 horas para mejorar mi concentración en clase”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Señales de alerta física</div>
+              <div class="card-tag">Pedir ayuda</div>
+            </div>
+            <ul>
+              <li>Dolores frecuentes, mareos o cansancio constante.</li>
+              <li>Cambios bruscos en el peso o en el apetito.</li>
+              <li>Alteraciones en la menstruación o en el crecimiento.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Si noto cambios extraños en mi cuerpo, hablar con un adulto de confianza o acudir a un servicio de salud”.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.2 Cambios emocionales -->
+      <section id="cambios-emocionales">
+        <h2>
+          Cambios emocionales
+          <span class="badge">Manejo de emociones y autoestima</span>
+        </h2>
+        <p class="section-subtitle">
+          Aquí reflexiono sobre cómo me siento, cómo manejo el estrés y qué hago para cuidar mi salud mental.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Estrés y ansiedad</div>
+              <div class="card-tag">Pausar y respirar</div>
+            </div>
+            <ul>
+              <li>Identificar qué cosas me provocan estrés (escuela, familia, redes sociales, etc.).</li>
+              <li>Usar técnicas de relajación: respiración profunda, música tranquila, caminar.</li>
+              <li>Organizar mis tareas en una lista para no sentirme saturado.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Practicar respiración profunda cuando me siento ansioso y necesito calmarme”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Autoestima y diálogo interno</div>
+              <div class="card-tag">Valorarme</div>
+            </div>
+            <ul>
+              <li>Reconocer mis cualidades y logros, por pequeños que parezcan.</li>
+              <li>Evitar compararme todo el tiempo con otras personas o redes sociales.</li>
+              <li>Hablarme con respeto y paciencia, como trataría a mi mejor amigo.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Escribir cada noche 3 cosas que hice bien durante el día”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Expresión de emociones</div>
+              <div class="card-tag">Sentir es válido</div>
+            </div>
+            <ul>
+              <li>Pedir un espacio para hablar cuando algo me preocupa o molesta.</li>
+              <li>Buscar formas sanas de expresión: escribir, dibujar, escuchar música, hacer deporte.</li>
+              <li>Respetar también las emociones de otras personas.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Cuando me siento triste, escribo lo que siento y hablo con alguien de confianza”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Señales de alerta emocional</div>
+              <div class="card-tag">No estoy solo/a</div>
+            </div>
+            <ul>
+              <li>Sentirme triste o vacío la mayor parte del tiempo.</li>
+              <li>Perder el interés por actividades que antes disfrutaba.</li>
+              <li>Pensamientos de hacerse daño o de no querer vivir.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Si tengo pensamientos de hacerme daño, pedir ayuda de inmediato a un adulto de confianza o a una línea de apoyo”.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.3 Cambios sociales -->
+      <section id="cambios-sociales">
+        <h2>
+          Cambios sociales
+          <span class="badge">Relaciones sanas</span>
+        </h2>
+        <p class="section-subtitle">
+          En esta parte reflexiono sobre mis relaciones con amigos, familia, pareja y redes sociales.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Amistades</div>
+              <div class="card-tag">Apoyo y respeto</div>
+            </div>
+            <ul>
+              <li>Elegir amistades que me respeten y me permitan ser yo mismo.</li>
+              <li>Poner límites cuando algo no me hace sentir cómodo.</li>
+              <li>Evitar participar en burlas, chismes o violencia hacia otras personas.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Alejarme de grupos donde se normalizan insultos, agresiones o presiones que no quiero”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Familia y adultos de confianza</div>
+              <div class="card-tag">Red de apoyo</div>
+            </div>
+            <ul>
+              <li>Identificar qué adultos me escuchan y me apoyan (familiares, docentes, tutores).</li>
+              <li>Ser honesto cuando necesito ayuda o cuando algo me preocupa.</li>
+              <li>Respetar también las normas y acuerdos en casa.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Pedir hablar con calma cuando hay un conflicto en casa en lugar de gritar o guardar silencio”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Relaciones de pareja</div>
+              <div class="card-tag">Consentimiento y límites</div>
+            </div>
+            <ul>
+              <li>Recordar que ninguna relación debe basarse en el control, los celos o la violencia.</li>
+              <li>Respetar el consentimiento y los límites propios y de la otra persona.</li>
+              <li>No permitir presiones para enviar fotos íntimas, tener relaciones sexuales o hacer cosas que no quiero.</li>
+            </ul>
+            <p class="example">
+              <strong>Ejemplo:</strong> “Respetar el consentimiento y los límites en mis relaciones, incluso cuando la otra persona insiste”.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Redes sociales y mundo digital</div>
+              <div class="card-tag">Uso responsable</div>
+            </div>
+            <ul>
+              <li>Cuidar la información personal que comparto en internet.</li>
+              <li>Evitar el ciberacoso y denunciar contenido violento o que me haga daño.</li>
+              <li>Buscar un equilibrio entre el tiempo conectado y otras actividades.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">Respeto</span>
+              <span class="chip">Límites claros</span>
+              <span class="chip">Consentimiento</span>
+              <span class="chip">Comunicación</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Recursos de apoyo -->
+      <section id="recursos">
+        <h2>
+          Recursos de apoyo
+          <span class="badge">Pedir ayuda es valiente</span>
+        </h2>
+        <p class="section-subtitle">
+          Si siento que solo no puedo con lo que me pasa, puedo acudir a estas instituciones y recursos
+          confiables sobre salud, adolescencia y bienestar emocional.
+        </p>
+
+        <div class="resources-list">
+          <div class="resource">
+            <div class="resource-title">Línea de la Vida</div>
+            <small>Secretaría de Salud de México</small>
+            <p>
+              Línea telefónica nacional que ofrece apoyo emocional y orientación sobre salud mental,
+              consumo de sustancias y situaciones de crisis, las 24 horas del día.
+            </p>
+            <p><strong>Teléfono:</strong> 800 911 2000</p>
+            <a href="https://www.gob.mx/lineadelavida" target="_blank" rel="noopener noreferrer">
+              www.gob.mx/lineadelavida
+            </a>
+          </div>
+
+          <div class="resource">
+            <div class="resource-title">UNICEF México – Adolescencia</div>
+            <small>Fondo de las Naciones Unidas para la Infancia</small>
+            <p>
+              Información y recursos sobre derechos, salud, bienestar y protección de adolescentes,
+              así como materiales para fortalecer la salud física y emocional.
+            </p>
+            <a href="https://www.unicef.org/mexico/search?query=adolescentes&amp;created%5Bmin%5D=&amp;created%5Bmax%5D=" target="_blank" rel="noopener noreferrer">
+              unicef.org/mexico/adolescentes
+            </a>
+          </div>
+
+          <div class="resource">
+            <div class="resource-title">Contacto Joven / IMJUVE</div>
+            <small>Red Nacional de Atención Juvenil</small>
+            <p>
+              Proyecto que brinda apoyo psicosocial y orientación a adolescentes y jóvenes, mediante
+              profesionales que ofrecen acompañamiento emocional y canalización a servicios de salud.
+            </p>
+            <a href="https://www.gob.mx/imjuve/acciones-y-programas/contacto-joven-red-nacional-de-atencion-juvenil" target="_blank" rel="noopener noreferrer">
+              gob.mx/imjuve
+            </a>
+          </div>
+        </div>
+      </section>
+
+<!-- 5. Reflexión final -->
+<section id="reflexion-final">
+  <h2>
+    Reflexión final
+    <span class="badge">Lo que aprendí</span>
+  </h2>
+
+  <p>
+    Aprendí que el autocuidado es importante porque me ayuda a sentirme bien física, emocional y socialmente.
+    Entendí que hábitos sencillos como mantener una buena higiene, comer de manera más saludable, hacer
+    ejercicio y dormir lo suficiente influyen en mi salud y en mi desempeño diario.
+  </p>
+
+  <p>
+    También que es normal sentir estrés, tristeza o enojo, y que puedo manejar estas emociones con
+    acciones simples como respirar profundo, organizar mis actividades y hablar con alguien de confianza.
+    En cuanto a mis relaciones, aprendí que deben basarse en el respeto, la comunicación y el establecimiento
+    de límites.
+  </p>
+
+  <p>
+    Finalmente, entendí que pedir ayuda cuando la necesito es parte del autocuidado. En base a esta guía,
+    quiero aplicar lo aprendido cuidando mejor mis hábitos, expresando lo que siento y buscando apoyo cuando
+    sea necesario.
+  </p>
+</section>
+    <footer>
+      Proyecto: <span class="highlight">Guía de Autocuidado en la Adolescencia</span>
+    </footer>
+  </main></div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
